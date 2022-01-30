@@ -1,0 +1,72 @@
+<app-side-nav>
+
+    <div class="p-5">
+        <div class="container  border border-success p-3 ">
+
+            <h1
+                style="color: black;text-align: center;font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                ALL USERS
+            </h1>
+
+            <div class="d-flex">
+
+                <div style="width: 67%;margin-left: 1em;" class="input-group">
+                    <input type="text" class="form-control" placeholder="Search!!">
+                    <div class="input-group-append">
+                        <button style="height: 4em;" class="btn btn-primary black" type="button">
+                            <mat-icon>
+
+                                search
+
+                            </mat-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div style="width: 23%;">
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="container-fluid pt-3">
+                <div class="d-flex flex-row justify-content-between">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">UserID</th>
+                                <th scope="col">Email</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of users let i=index">
+                                <th scope="row">{{i+1}}</th>
+                                <td>{{item.name}}</td>
+                                <td>{{item._id}}</td>
+                                <td>{{item.email}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</app-side-nav>

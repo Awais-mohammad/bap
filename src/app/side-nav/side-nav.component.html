@@ -1,0 +1,47 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="h-20 pt-5 text-center">
+      <img class="mt-5" style="width: 80%;object-fit: cover;" src="https://exportportal.site/logored.png" alt="">
+
+    </mat-toolbar>
+    <mat-nav-list class="pt-5 mt-5">
+
+      <a *ngIf="cPage=='/manage-users' && role=='Admin'" class="list active" mat-list-item href="manageexporters">Manage
+        Users</a>
+      <a *ngIf="cPage!='/manage-users' && role=='Admin'" class="list" mat-list-item href="manage-users">Manage
+        Users</a>
+
+      <a *ngIf="cPage=='/home' && role=='Admin'" class="list active" mat-list-item href="home">Manage Products</a>
+      <a *ngIf="cPage!='/home' && role=='Admin'" class="list" mat-list-item href="home">Manage
+        Products</a>
+
+      <a class="list" (click)="openDialog()" mat-list-item>Send Email</a>
+
+      <a *ngIf="cPage=='/support' && role=='Admin'" class="list active" mat-list-item href="support">Support request</a>
+      <a *ngIf="cPage!='/support' && role=='Admin'" class="list" mat-list-item href="support">Support request</a>
+
+      <a *ngIf="cPage=='/manage-orders' && role=='Admin'" class="list active" mat-list-item href="manage-orders">Manage
+        Orders
+      </a>
+      <a *ngIf="cPage!='/manage-orders' && role=='Admin'" class="list" mat-list-item href="manage-orders">Manage
+        Orders</a>
+
+      <a (click)="logout()" style="color: red;" class="list" mat-list-item>Logout</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="background">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon style="color: white;" aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span style="color: white;">BRIXTONBEST-ADMIN PANEL</span>
+    </mat-toolbar>
+
+    <ng-content></ng-content>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

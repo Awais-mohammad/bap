@@ -1,0 +1,43 @@
+.body {
+    background: #222d32;
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+}
+.boxParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 12em;
+}
+
+.box {
+    border-radius: 12px;
+    height: 30em;
+    width: 30em;
+    text-align: center;
+    background: white;
+}
+.iconLogin {
+    color: rgba(4, 4, 73, 0.884);
+    font-weight: bold;
+    font-size: 50px;
+}
+
+h4 {
+    font-family: "Hind Siliguri", sans-serif;
+    color: rgba(4, 4, 73, 0.884);
+    font-weight: bold;
+    font-size: 22px;
+    position: relative;
+    left: 1em;
+}
+label {
+    font-family: "Hind Siliguri", sans-serif;
+    color: rgba(4, 4, 73, 0.884);
+    font-weight: bold;
+}
+.form-group {
+    padding-top: 20px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap");

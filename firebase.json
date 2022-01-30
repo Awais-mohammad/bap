@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "adminpanelbrix",
+    "public": "dist/bap",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

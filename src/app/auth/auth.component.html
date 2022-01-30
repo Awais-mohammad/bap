@@ -1,0 +1,40 @@
+<div class="body">
+
+    <div *ngIf="!a" class="boxParent">
+        <div class="box p-4">
+            <mat-icon class="iconLogin">login</mat-icon>
+            <h4>ADMIN LOGIN</h4>
+
+            <form>
+                <div class="form-group">
+                    <label style="display: flex;justify-content: left;align-items: flex-start;">Email:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        [(ngModel)]="email" [ngModelOptions]="{standalone: true}" placeholder="Enter email">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                </div>
+                <div class="form-group">
+                    <label style="display: flex;justify-content: left;align-items: flex-start;">Password:</label>
+                    <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password"
+                        class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+                <div class="form-group">
+                    <button (click)="login()" mat-fab color="primary" aria-label="Example icon button with a home icon">
+                        <mat-icon>login</mat-icon>
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div style="position: relative;top: 17em;display: flex;text-align: center;justify-content: center;" class="p-5"
+        *ngIf="a">
+        <mat-progress-spinner style="background-color: white;color: white;" mode="indeterminate" class="p-3">
+        </mat-progress-spinner>
+    </div>
+
+</div>
